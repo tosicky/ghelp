@@ -1,0 +1,38 @@
+block vars
+- var title = 'Register'
+block body
+    h1 Register Mentor
+    form(method="post")
+    if (user)
+        input(type="hidden", name="_csrf")
+        span Mun No:
+         
+         
+          input(value="#{user.std_id}", type="number", name="munNo", required=true)
+        br
+        span First Name:
+            input(value="#{user.firstname}", type="text", name="firstName", required=true)
+        br
+        span Last Name:
+            input(type="text", name="lastName", required=true)
+        br
+        span Email:
+            input(type="email", name="email", required=true)
+        br
+        span Major:
+            input(type="text", name="major", required=true)
+        br
+        span Cellphone:
+            input(type="number", name="number", required=true)
+        br
+        span Sex:
+            input(type="text", name="sex", required=true)
+        br
+        span <strong>Preference</strong>:
+            textarea(name='preference', rows=5, cols=20 required=true, placeholder='Tell us your preference') 
+        br
+        span Assigned
+            input(type="boolean", name="assigned")
+        br
+        
+        input(type="submit")
